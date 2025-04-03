@@ -25,7 +25,7 @@ const Promotions = () => {
             {/* VEE-KAART logo */}
             <div className="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/9065d4c0-53f8-4197-956e-c237b476cd87.png" 
+                src="/lovable-uploads/7ac85464-da87-40a3-9775-6c90c3b76e81.png" 
                 alt="VEE-KAART Logo" 
                 className="w-40 h-auto" 
               />
@@ -41,9 +41,13 @@ const Promotions = () => {
                 Learn More <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            {/* Placeholder for product image */}
-            <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gray-100 flex items-center justify-center">
-              <span className="text-gray-500">Product Image</span>
+            {/* GRODHAANYA logo */}
+            <div className="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/a3330f44-d0ec-4458-a19e-9f98671eec7b.png" 
+                alt="GRODHAANYA Logo" 
+                className="w-40 h-auto" 
+              />
             </div>
           </div>
         </div>
@@ -60,7 +64,7 @@ const Promotions = () => {
           {/* VEE-KAART logo in the banner */}
           <div className="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-center">
             <img 
-              src="/lovable-uploads/9065d4c0-53f8-4197-956e-c237b476cd87.png" 
+              src="/lovable-uploads/7ac85464-da87-40a3-9775-6c90c3b76e81.png" 
               alt="VEE-KAART Logo" 
               className="w-40 h-auto opacity-80" 
             />

@@ -39,14 +39,12 @@ const Products = () => {
               </p>
             </div>
             <div className="md:w-1/3 flex justify-center">
-              <div className="bg-grocery-primary rounded-lg p-8 max-w-xs">
-                <div className="flex justify-center mb-4">
-                  <div className="relative">
-                    <ShoppingCart size={64} className="text-white" />
-                    <span className="absolute -top-2 -right-2 text-white text-xl">+</span>
-                  </div>
-                </div>
-                <h3 className="text-white text-2xl font-bold text-center">VEE-KAART<sup>®</sup></h3>
+              <div className="rounded-lg overflow-hidden max-w-xs">
+                <img 
+                  src="/lovable-uploads/7ac85464-da87-40a3-9775-6c90c3b76e81.png" 
+                  alt="VEE-KAART Logo" 
+                  className="w-full h-auto" 
+                />
               </div>
             </div>
           </div>
@@ -85,7 +83,7 @@ const Products = () => {
             </div>
             <div className="md:w-1/3 flex justify-center">
               <img 
-                src="/lovable-uploads/6a3af865-cb37-4668-bc9d-3a377ced839f.png" 
+                src="/lovable-uploads/a3330f44-d0ec-4458-a19e-9f98671eec7b.png" 
                 alt="GRODHAANYA Logo" 
                 className="max-w-xs w-full"
               />
