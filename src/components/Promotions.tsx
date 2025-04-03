@@ -18,9 +18,9 @@ const Promotions = () => {
             <div className="relative z-10 px-8">
               <h3 className="text-2xl font-bold mb-2">VEE-KAART</h3>
               <p className="mb-4 text-gray-700">Your Online Shopping Destination for Home Needs</p>
-              <Link to="/products" className="text-grocery-primary font-medium flex items-center">
-                Learn More <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <a href="https://veekaart.com" target="_blank" rel="noopener noreferrer" className="text-grocery-primary font-medium flex items-center">
+                Shop Now <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
             {/* Placeholder for product image */}
             <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gray-100 flex items-center justify-center">
@@ -49,9 +49,9 @@ const Promotions = () => {
           <div className="relative z-10 px-8 max-w-lg text-white">
             <h3 className="text-2xl font-bold mb-2">Ready to explore our products?</h3>
             <p className="mb-4">Discover our premium quality groceries and home essentials</p>
-            <Link to="/products" className="bg-white text-grocery-primary hover:bg-white/90 font-medium px-6 py-2 rounded-md transition-colors">
-              View Products
-            </Link>
+            <a href="https://veekaart.com" target="_blank" rel="noopener noreferrer" className="bg-white text-grocery-primary hover:bg-white/90 font-medium px-6 py-2 rounded-md transition-colors">
+              Shop Now
+            </a>
           </div>
           {/* Placeholder for banner image */}
           <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gray-100/20 flex items-center justify-center">

@@ -29,11 +29,16 @@ const Header = () => {
               </ul>
             </nav>
             
-            {/* Contact Button and Mobile Menu Button */}
+            {/* Shop Now Button and Mobile Menu Button */}
             <div className="flex items-center space-x-4">
-              <Link to="/contact" className="hidden md:block bg-white text-grocery-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors font-medium">
-                Get in Touch
-              </Link>
+              <a 
+                href="https://veekaart.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hidden md:block bg-white text-grocery-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors font-medium"
+              >
+                Shop Now
+              </a>
               
               <button 
                 className="md:hidden text-white"
@@ -55,9 +60,14 @@ const Header = () => {
                 <li><Link to="/products" className="block font-medium text-white hover:text-white/80 px-2">Products</Link></li>
                 <li><Link to="/contact" className="block font-medium text-white hover:text-white/80 px-2">Contact</Link></li>
                 <li className="pt-4 px-2">
-                  <Link to="/contact" className="bg-white text-grocery-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors inline-block font-medium">
-                    Get in Touch
-                  </Link>
+                  <a 
+                    href="https://veekaart.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-white text-grocery-primary px-4 py-2 rounded-md hover:bg-white/90 transition-colors inline-block font-medium"
+                  >
+                    Shop Now
+                  </a>
                 </li>
               </ul>
             </div>
