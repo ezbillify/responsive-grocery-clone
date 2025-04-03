@@ -40,7 +40,11 @@ const Home = () => {
           
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-8 md:mb-12">
             <div className="w-full md:w-1/3 flex justify-center">
-              <img src="/placeholder.svg" alt="Store Illustration" className="w-full max-w-xs" />
+              <img 
+                src="/lovable-uploads/6ddd8b2d-61e3-44fd-bdaf-96297616c158.png" 
+                alt="Store Illustration" 
+                className="w-full max-w-xs rounded-lg shadow-lg" 
+              />
             </div>
             <div className="w-full md:w-2/3">
               <h3 className="text-lg md:text-xl font-bold mb-3">Online Solutions:</h3>
@@ -99,7 +103,11 @@ const Home = () => {
               </p>
             </div>
             <div className="w-full md:w-1/3 flex justify-center">
-              <img src="/placeholder.svg" alt="Award Badge" className="w-32 md:w-40" />
+              <img 
+                src="/lovable-uploads/7a778212-0f6d-4f71-b92f-8a3bd9143186.png" 
+                alt="Award Badge" 
+                className="w-32 md:w-40" 
+              />
             </div>
           </div>
         </div>
