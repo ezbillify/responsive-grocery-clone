@@ -39,11 +39,11 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-6 lg:space-x-8">
               <li><Link to="/" className="font-medium hover:text-grocery-primary">Home</Link></li>
               <li><Link to="/about" className="font-medium hover:text-grocery-primary">About</Link></li>
+              <li><Link to="/careers" className="font-medium hover:text-grocery-primary">Careers</Link></li>
               <li><Link to="/solutions" className="font-medium hover:text-grocery-primary">Solutions</Link></li>
-              <li><Link to="/case-studies" className="font-medium hover:text-grocery-primary">Case Studies</Link></li>
               <li><Link to="/blog" className="font-medium hover:text-grocery-primary">Blog</Link></li>
               <li><Link to="/contact" className="font-medium hover:text-grocery-primary">Contact</Link></li>
             </ul>
@@ -67,15 +67,15 @@ const Header = () => {
         
         {/* Mobile navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 px-4 bg-white border-t mt-4">
+          <div className="md:hidden py-4 bg-white border-t mt-4">
             <ul className="space-y-4">
-              <li><Link to="/" className="block font-medium hover:text-grocery-primary">Home</Link></li>
-              <li><Link to="/about" className="block font-medium hover:text-grocery-primary">About</Link></li>
-              <li><Link to="/solutions" className="block font-medium hover:text-grocery-primary">Solutions</Link></li>
-              <li><Link to="/case-studies" className="block font-medium hover:text-grocery-primary">Case Studies</Link></li>
-              <li><Link to="/blog" className="block font-medium hover:text-grocery-primary">Blog</Link></li>
-              <li><Link to="/contact" className="block font-medium hover:text-grocery-primary">Contact</Link></li>
-              <li className="pt-4">
+              <li><Link to="/" className="block font-medium hover:text-grocery-primary px-2">Home</Link></li>
+              <li><Link to="/about" className="block font-medium hover:text-grocery-primary px-2">About</Link></li>
+              <li><Link to="/careers" className="block font-medium hover:text-grocery-primary px-2">Careers</Link></li>
+              <li><Link to="/solutions" className="block font-medium hover:text-grocery-primary px-2">Solutions</Link></li>
+              <li><Link to="/blog" className="block font-medium hover:text-grocery-primary px-2">Blog</Link></li>
+              <li><Link to="/contact" className="block font-medium hover:text-grocery-primary px-2">Contact</Link></li>
+              <li className="pt-4 px-2">
                 <Link to="/contact" className="btn-primary inline-block">
                   Get in Touch
                 </Link>

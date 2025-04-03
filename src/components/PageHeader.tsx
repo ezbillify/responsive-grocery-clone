@@ -10,11 +10,11 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, breadcrumbs = [] }) => {
   return (
-    <div className="bg-grocery-secondary py-8 px-4">
+    <div className="bg-grocery-secondary py-6 md:py-8 px-4">
       <div className="container mx-auto">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">{title}</h1>
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-center">{title}</h1>
         
-        <div className="flex items-center justify-center">
+        <div className="flex flex-wrap items-center justify-center text-sm md:text-base">
           <Link to="/" className="flex items-center text-gray-600 hover:text-grocery-primary">
             <Home size={16} className="mr-1" />
             <span>Home</span>
@@ -22,7 +22,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, breadcrumbs = [] }) => {
           
           {breadcrumbs.map((crumb, index) => (
             <React.Fragment key={index}>
-              <ChevronRight size={16} className="mx-2 text-gray-500" />
+              <ChevronRight size={16} className="mx-1 md:mx-2 text-gray-500" />
               <Link 
                 to={crumb.url} 
                 className={`${
