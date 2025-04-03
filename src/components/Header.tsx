@@ -25,7 +25,6 @@ const Header = () => {
                 <li><Link to="/about" className="font-medium text-white hover:text-white/80">About</Link></li>
                 <li><Link to="/careers" className="font-medium text-white hover:text-white/80">Careers</Link></li>
                 <li><Link to="/products" className="font-medium text-white hover:text-white/80">Products</Link></li>
-                <li><Link to="/contact" className="font-medium text-white hover:text-white/80">Contact</Link></li>
               </ul>
             </nav>
             
@@ -58,7 +57,6 @@ const Header = () => {
                 <li><Link to="/about" className="block font-medium text-white hover:text-white/80 px-2">About</Link></li>
                 <li><Link to="/careers" className="block font-medium text-white hover:text-white/80 px-2">Careers</Link></li>
                 <li><Link to="/products" className="block font-medium text-white hover:text-white/80 px-2">Products</Link></li>
-                <li><Link to="/contact" className="block font-medium text-white hover:text-white/80 px-2">Contact</Link></li>
                 <li className="pt-4 px-2">
                   <a 
                     href="https://veekaart.com" 
