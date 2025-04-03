@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,10 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				grocery: {
-					primary: '#05a751',
-					secondary: '#e8f5e9',
-					accent: '#ff6b00',
-					light: '#f8f9fa',
+					primary: '#FD8833',
+					secondary: '#FFF5EB',
+					accent: '#FD8833',
+					light: '#ffffff',
 					dark: '#212529'
 				}
 			},
