@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Video } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Video, Linkedin, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,8 +11,8 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 text-center md:text-left">
-              <h3 className="text-xl font-bold mb-2">Subscribe to our Newsletter</h3>
-              <p className="text-white/80">Get the latest updates and offers directly to your inbox</p>
+              <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
+              <p className="text-white/80">Subscribe to our newsletter for the latest industry insights</p>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/3">
               <form className="flex">
@@ -38,9 +38,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h4 className="text-lg font-bold mb-4">About GroceryWave</h4>
+            <h4 className="text-lg font-bold mb-4">About YourBrand</h4>
             <p className="text-gray-400 mb-4">
-              We provide fresh, high-quality groceries delivered to your doorstep. Shop from a wide range of fruits, vegetables, dairy products, and more.
+              We're a forward-thinking company dedicated to helping businesses grow through innovative solutions and strategic partnerships.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20">
@@ -53,7 +53,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20">
-                <Video size={18} />
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
@@ -62,27 +62,73 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-white">Home</Link></li>
-              <li><Link to="/shop" className="text-gray-400 hover:text-white">Shop</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-              <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-400 hover:text-white">Terms & Conditions</Link></li>
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Careers
+                </Link>
+              </li>
             </ul>
           </div>
           
-          {/* Categories */}
+          {/* Services */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Categories</h4>
+            <h4 className="text-lg font-bold mb-4">Our Solutions</h4>
             <ul className="space-y-2">
-              <li><Link to="/fruits" className="text-gray-400 hover:text-white">Fruits</Link></li>
-              <li><Link to="/vegetables" className="text-gray-400 hover:text-white">Vegetables</Link></li>
-              <li><Link to="/dairy" className="text-gray-400 hover:text-white">Dairy Products</Link></li>
-              <li><Link to="/bakery" className="text-gray-400 hover:text-white">Bakery Items</Link></li>
-              <li><Link to="/meat" className="text-gray-400 hover:text-white">Meat & Poultry</Link></li>
-              <li><Link to="/organic" className="text-gray-400 hover:text-white">Organic Products</Link></li>
-              <li><Link to="/beverages" className="text-gray-400 hover:text-white">Beverages</Link></li>
+              <li>
+                <Link to="/digital-transformation" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Digital Transformation
+                </Link>
+              </li>
+              <li>
+                <Link to="/brand-strategy" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Brand Strategy
+                </Link>
+              </li>
+              <li>
+                <Link to="/web-development" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Web Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/app-development" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> App Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/consulting" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Consulting
+                </Link>
+              </li>
+              <li>
+                <Link to="/marketing" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Marketing
+                </Link>
+              </li>
             </ul>
           </div>
           
@@ -92,7 +138,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
-                <p className="text-gray-400">123 Main Street, New Delhi, 110001, India</p>
+                <p className="text-gray-400">123 Business Avenue, Tech Park, Bangalore 560001, India</p>
               </li>
               <li className="flex">
                 <Phone className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
@@ -100,7 +146,7 @@ const Footer = () => {
               </li>
               <li className="flex">
                 <Mail className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
-                <p className="text-gray-400">support@grocerywave.in</p>
+                <p className="text-gray-400">info@yourbrand.com</p>
               </li>
             </ul>
           </div>
@@ -112,13 +158,12 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-2 md:mb-0">
-              &copy; {new Date().getFullYear()} GroceryWave. All rights reserved.
+              &copy; {new Date().getFullYear()} YourBrand. All rights reserved.
             </p>
-            <div className="flex space-x-4">
-              <img src="https://via.placeholder.com/40x25" alt="Payment Method" className="h-6" />
-              <img src="https://via.placeholder.com/40x25" alt="Payment Method" className="h-6" />
-              <img src="https://via.placeholder.com/40x25" alt="Payment Method" className="h-6" />
-              <img src="https://via.placeholder.com/40x25" alt="Payment Method" className="h-6" />
+            <div className="flex space-x-4 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link>
+              <Link to="/sitemap" className="text-gray-400 hover:text-white">Sitemap</Link>
             </div>
           </div>
         </div>
