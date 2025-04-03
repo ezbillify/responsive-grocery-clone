@@ -15,9 +15,9 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/d002d886-9353-4970-8833-d64d3f277869.png" 
+                src="/lovable-uploads/bf406abd-dc0b-4bc5-ad0e-2d80f56f007a.png" 
                 alt="GroceryWave Logo" 
-                className="h-16 md:h-20" 
+                className="h-20 md:h-24" 
               />
             </Link>
             
