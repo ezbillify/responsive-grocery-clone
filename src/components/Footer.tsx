@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Video, Linkedin, ChevronRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
       
       {/* Main footer content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* About */}
           <div>
             <h4 className="text-lg font-bold mb-4">About YourBrand</h4>
@@ -73,18 +73,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Blog
+                <Link to="/products" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Products
                 </Link>
               </li>
               <li>
@@ -92,41 +82,9 @@ const Footer = () => {
                   <ChevronRight size={14} className="mr-1" /> Careers
                 </Link>
               </li>
-            </ul>
-          </div>
-          
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-bold mb-4">Our Solutions</h4>
-            <ul className="space-y-2">
               <li>
-                <Link to="/digital-transformation" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Digital Transformation
-                </Link>
-              </li>
-              <li>
-                <Link to="/brand-strategy" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Brand Strategy
-                </Link>
-              </li>
-              <li>
-                <Link to="/web-development" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Web Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/app-development" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/consulting" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Consulting
-                </Link>
-              </li>
-              <li>
-                <Link to="/marketing" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Marketing
+                <Link to="/contact" className="text-gray-400 hover:text-white flex items-center">
+                  <ChevronRight size={14} className="mr-1" /> Contact
                 </Link>
               </li>
             </ul>
@@ -163,7 +121,6 @@ const Footer = () => {
             <div className="flex space-x-4 text-sm">
               <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link>
-              <Link to="/sitemap" className="text-gray-400 hover:text-white">Sitemap</Link>
             </div>
           </div>
         </div>

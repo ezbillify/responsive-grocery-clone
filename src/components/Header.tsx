@@ -43,8 +43,7 @@ const Header = () => {
               <li><Link to="/" className="font-medium hover:text-grocery-primary">Home</Link></li>
               <li><Link to="/about" className="font-medium hover:text-grocery-primary">About</Link></li>
               <li><Link to="/careers" className="font-medium hover:text-grocery-primary">Careers</Link></li>
-              <li><Link to="/solutions" className="font-medium hover:text-grocery-primary">Solutions</Link></li>
-              <li><Link to="/blog" className="font-medium hover:text-grocery-primary">Blog</Link></li>
+              <li><Link to="/products" className="font-medium hover:text-grocery-primary">Products</Link></li>
               <li><Link to="/contact" className="font-medium hover:text-grocery-primary">Contact</Link></li>
             </ul>
           </nav>
@@ -72,8 +71,7 @@ const Header = () => {
               <li><Link to="/" className="block font-medium hover:text-grocery-primary px-2">Home</Link></li>
               <li><Link to="/about" className="block font-medium hover:text-grocery-primary px-2">About</Link></li>
               <li><Link to="/careers" className="block font-medium hover:text-grocery-primary px-2">Careers</Link></li>
-              <li><Link to="/solutions" className="block font-medium hover:text-grocery-primary px-2">Solutions</Link></li>
-              <li><Link to="/blog" className="block font-medium hover:text-grocery-primary px-2">Blog</Link></li>
+              <li><Link to="/products" className="block font-medium hover:text-grocery-primary px-2">Products</Link></li>
               <li><Link to="/contact" className="block font-medium hover:text-grocery-primary px-2">Contact</Link></li>
               <li className="pt-4 px-2">
                 <Link to="/contact" className="btn-primary inline-block">
