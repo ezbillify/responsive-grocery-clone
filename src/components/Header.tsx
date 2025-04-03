@@ -14,8 +14,11 @@ const Header = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-white">GroceryWave</span>
-              {/* Logo will go here once provided */}
+              <img 
+                src="/lovable-uploads/d002d886-9353-4970-8833-d64d3f277869.png" 
+                alt="GroceryWave Logo" 
+                className="h-12 md:h-14"
+              />
             </Link>
             
             {/* Desktop Navigation */}
