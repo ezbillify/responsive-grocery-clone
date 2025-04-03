@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -24,10 +23,11 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="text-center">
-              <div className="flex justify-center">
-                <ShoppingCart size={64} className="text-black mb-4" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold">VEE-KAART</h2>
+              <img 
+                src="/lovable-uploads/9065d4c0-53f8-4197-956e-c237b476cd87.png" 
+                alt="VEE-KAART Logo" 
+                className="w-48 md:w-64 mx-auto mb-4" 
+              />
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/d002d886-9353-4970-8833-d64d3f277869.png" 
                 alt="GroceryWave Logo" 
-                className="h-12 md:h-14"
+                className="h-16 md:h-20" 
               />
             </Link>
             
