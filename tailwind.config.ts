@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,9 +64,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				grocery: {
-					primary: '#FD8833',
-					secondary: '#FFF5EB',
-					accent: '#FD8833',
+					primary: '#FF8A3A', // Orange color from the design
+					secondary: '#FFC097', // Light orange for the secondary section
+					accent: '#FF8A3A',
 					light: '#ffffff',
 					dark: '#212529'
 				}

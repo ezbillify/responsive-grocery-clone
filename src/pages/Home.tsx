@@ -1,139 +1,139 @@
 
 import React from 'react';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Promotions from '../components/Promotions';
-import Footer from '../components/Footer';
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ShoppingCart } from 'lucide-react';
 
 const Home = () => {
-  // Sample testimonials data
-  const testimonials = [
-    {
-      id: 1,
-      text: "Working with YourBrand transformed our business processes and increased our efficiency by 45%. Their team is incredibly professional and knowledgeable.",
-      author: "Sarah Johnson",
-      title: "CEO, TechSolutions Inc."
-    },
-    {
-      id: 2,
-      text: "The digital transformation strategy provided by YourBrand helped us navigate our industry challenges and stay ahead of competitors.",
-      author: "Mark Williams",
-      title: "Operations Director, InnovateCorp"
-    },
-    {
-      id: 3,
-      text: "YourBrand delivered an exceptional brand strategy that perfectly captured our vision and resonated with our target audience. Highly recommended!",
-      author: "Priya Patel",
-      title: "Marketing Head, FutureWorks"
-    }
-  ];
-  
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">
-        <Hero />
-        <Promotions />
-        
-        {/* About Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <div className="bg-white rounded-lg shadow-lg p-2 max-w-md mx-auto">
-                  {/* About image placeholder */}
-                  <div className="bg-gray-100 h-80 rounded flex items-center justify-center">
-                    <span className="text-gray-500">About Image</span>
-                  </div>
-                </div>
+      {/* Header */}
+      <header className="bg-grocery-primary py-6 px-4 md:px-8">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center">
+            <div className="mr-2">
+              <img src="/lovable-uploads/f1dac4a1-5a3e-466a-ba92-016e0e543eac.png" alt="GroceryWave Logo" className="h-10" />
+            </div>
+            <h1 className="text-2xl font-bold">GroceryWave</h1>
+          </div>
+          <nav className="flex items-center space-x-6">
+            <Link to="/about" className="text-black hover:text-black/80 font-medium">About Us</Link>
+            <Link to="/careers" className="text-black hover:text-black/80 font-medium">Careers</Link>
+            <Link to="/products" className="text-black hover:text-black/80 font-medium">Our Products</Link>
+            <Link to="/shop" className="bg-white text-black font-semibold px-4 py-2 rounded-md hover:bg-white/90">SHOP NOW</Link>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-grocery-primary py-16 px-4 md:px-8">
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <h1 className="text-2xl font-bold mb-4">Welcome to <span className="text-white">GroceryWave</span></h1>
+            <p className="text-black mb-6">
+              At GroceryWave, we're shaping the future of everyday living with our innovative online solutions and a curated selection of physical products, including high-quality groceries and nutritious dry fruits.
+            </p>
+            <p className="text-black">
+              Our mission is to simplify life through technology and provide products that enrich your daily experiences with quality and trust.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="text-center">
+              <div className="flex justify-center">
+                <ShoppingCart size={80} className="text-black mb-4" />
               </div>
-              <div className="w-full md:w-1/2 md:pl-12">
-                <span className="text-grocery-primary font-medium">About Us</span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">We're more than just a company</h2>
-                <p className="text-gray-600 mb-6">
-                  Founded in 2010, YourBrand has been at the forefront of innovation, helping businesses transform and thrive in an increasingly digital world. Our team of experts combines creativity with technical expertise to deliver solutions that drive real results.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <div className="bg-grocery-secondary p-1 rounded-full mr-3 mt-1">
-                      <div className="bg-grocery-primary rounded-full w-4 h-4"></div>
-                    </div>
-                    <p>Over 12 years of industry experience</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="bg-grocery-secondary p-1 rounded-full mr-3 mt-1">
-                      <div className="bg-grocery-primary rounded-full w-4 h-4"></div>
-                    </div>
-                    <p>200+ successful projects delivered</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="bg-grocery-secondary p-1 rounded-full mr-3 mt-1">
-                      <div className="bg-grocery-primary rounded-full w-4 h-4"></div>
-                    </div>
-                    <p>Team of 50+ specialized professionals</p>
-                  </li>
-                </ul>
-                <Link to="/about" className="btn-primary inline-flex items-center">
-                  Learn More <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </div>
+              <h2 className="text-3xl font-bold">VEE-KAART</h2>
             </div>
           </div>
-        </section>
-        
-        {/* Testimonials Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <span className="text-grocery-primary font-medium">Testimonials</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Don't just take our word for it - hear from some of our satisfied clients
+        </div>
+      </section>
+
+      {/* Expertise Section */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center text-grocery-primary mb-12">Our Expertise</h2>
+          
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div className="w-full md:w-1/3">
+              <img src="/placeholder.svg" alt="Store Illustration" className="w-full" />
+            </div>
+            <div className="w-full md:w-2/3">
+              <h3 className="text-xl font-bold mb-3">Online Solutions:</h3>
+              <p className="mb-6">
+                We build custom platforms designed for efficiency and user-friendliness. From e-commerce solutions to daily needs we got you covered
               </p>
+              
+              <h3 className="text-xl font-bold mb-3">Physical Products:</h3>
+              <p className="mb-3">We offer a carefully curated range of:</p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li><strong>Groceries:</strong> Fresh, reliable, and sourced with care to meet everyday needs.</li>
+                <li><strong>Dry Fruits:</strong> Premium-grade selections packed with nutrition and flavor.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why GroceryWave Section */}
+      <section className="py-16 px-4 md:px-8 bg-grocery-secondary">
+        <div className="container mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">Why <span className="text-grocery-primary">GroceryWave</span>?</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-2">Unmatched Quality:</h3>
+              <p>Our groceries and dry fruits are sourced from trusted suppliers to guarantee freshness and authenticity.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map(testimonial => (
-                <div key={testimonial.id} className="bg-grocery-secondary p-8 rounded-lg shadow-md hover-scale">
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
-                  <div>
-                    <p className="font-bold">{testimonial.author}</p>
-                    <p className="text-gray-600 text-sm">{testimonial.title}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-2">Innovation & Excellence:</h3>
+              <p>Cutting-edge solutions paired with high-quality products for a seamless experience.</p>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-2">Sustainability at Heart:</h3>
+              <p>We prioritize eco-friendly practices in our products and processes.</p>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-2">Customer-First Approach:</h3>
+              <p>Your satisfaction drives everything we do.</p>
             </div>
           </div>
-        </section>
-        
-        {/* CTA Section */}
-        <section className="bg-grocery-primary py-16 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your business?</h2>
-            <p className="text-white/80 max-w-2xl mx-auto mb-8">
-              Contact us today to schedule a consultation and discover how our solutions can help your business grow.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="bg-white text-grocery-primary hover:bg-white/90 font-medium px-8 py-3 rounded-md transition-colors">
-                Get Started
-              </Link>
-              <Link to="/case-studies" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium px-8 py-3 rounded-md transition-colors">
-                View Case Studies
-              </Link>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-full md:w-2/3">
+              <h2 className="text-2xl font-bold mb-6">Experience the GroceryWave Advantage</h2>
+              <p>
+                Whether it's a tech-driven solution to elevate your living or premium groceries and dry fruits to enrich your day, GroceryWave is your trusted partner. Together, we can create smarter, healthier, and more fulfilling experiences.
+              </p>
+            </div>
+            <div className="w-full md:w-1/3 flex justify-center">
+              <img src="/placeholder.svg" alt="Award Badge" className="w-40" />
             </div>
           </div>
-        </section>
-      </main>
-      <Footer />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black text-white py-8 px-4 md:px-8 mt-auto">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between mb-8">
+            <div>
+              <h2 className="text-2xl font-bold mb-4">GroceryWave</h2>
+              <p className="mb-2">email</p>
+              <p>phone</p>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 pt-4 text-center">
+            <p>© 2025 GroceryWave Pvt Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 30 98% 60%; /* Updated to match #FD8833 */
+    --primary: 24 100% 61%; /* Updated to match #FF8A3A */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 100% 97%; /* Light orange background */
+    --secondary: 24 100% 80%; /* Light orange background */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 30 98% 60%; /* Updated to match #FD8833 */
+    --accent: 24 100% 61%; /* Updated to match #FF8A3A */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 30 98% 60%; /* Updated to match #FD8833 */
+    --ring: 24 100% 61%; /* Updated to match #FF8A3A */
 
     --radius: 0.5rem;
 
