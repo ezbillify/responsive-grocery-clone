@@ -4,6 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TransitionLayout from "./components/TransitionLayout";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
@@ -20,15 +22,16 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/" element={<TransitionLayout><Home /></TransitionLayout>} />
+          <Route path="/about" element={<TransitionLayout><About /></TransitionLayout>} />
+          <Route path="/careers" element={<TransitionLayout><Careers /></TransitionLayout>} />
+          <Route path="/products" element={<TransitionLayout><Products /></TransitionLayout>} />
+          <Route path="/shop" element={<TransitionLayout><Shop /></TransitionLayout>} />
+          <Route path="/product/:id" element={<TransitionLayout><ProductDetail /></TransitionLayout>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<TransitionLayout><NotFound /></TransitionLayout>} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
