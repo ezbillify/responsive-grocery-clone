@@ -73,7 +73,7 @@ const InternshipAuth = () => {
     }
   };
 
-  const downloadReport = async () => {
+  const handleDownload = () => {
     if (!internshipData?.report_url) {
       toast({
         title: "Error",
@@ -85,26 +85,12 @@ const InternshipAuth = () => {
     
     setDownloadLoading(true);
     try {
-      // Use direct file path provided in report_url
-      const { data, error } = await supabase
-        .storage
-        .from('internship_reports')
-        .download(internshipData.report_url);
-      
-      if (error) {
-        console.error('Download error:', error);
-        throw error;
-      } 
-      
-      // Create a blob URL and trigger download
-      const url = URL.createObjectURL(data);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${internshipData.full_name}_report.pdf`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
+      const link = document.createElement("a");
+      link.href = internshipData.report_url;
+      link.setAttribute("download", "");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       
       toast({
         title: "Success",
@@ -178,7 +164,7 @@ const InternshipAuth = () => {
           {internshipData.report_url && (
             <CardFooter>
               <Button 
-                onClick={downloadReport} 
+                onClick={handleDownload} 
                 variant="outline" 
                 className="w-full"
                 disabled={downloadLoading}
