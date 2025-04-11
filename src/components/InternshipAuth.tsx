@@ -29,6 +29,7 @@ type InternshipData = {
 const InternshipAuth = () => {
   const [internshipData, setInternshipData] = useState<InternshipData | null>(null);
   const [loading, setLoading] = useState(false);
+  const [downloadLoading, setDownloadLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -73,31 +74,46 @@ const InternshipAuth = () => {
   };
 
   const downloadReport = async () => {
-    if (!internshipData?.report_url) return;
+    if (!internshipData?.report_url) {
+      toast({
+        title: "Error",
+        description: "No report available for download.",
+        variant: "destructive",
+      });
+      return;
+    }
     
+    setDownloadLoading(true);
     try {
-      const { data, error } = await supabase.storage
+      // Get the file name from the URL
+      const fileName = internshipData.report_url.split('/').pop() || 'report.pdf';
+      
+      // First, try to get a signed URL for the file
+      const { data: signedUrlData, error: signedUrlError } = await supabase
+        .storage
         .from('internship_reports')
-        .download(internshipData.report_url);
-        
-      if (error) {
-        throw error;
+        .createSignedUrl(internshipData.report_url, 60); // 60 seconds expiry
+      
+      if (signedUrlError) {
+        throw signedUrlError;
       }
       
-      // Create a download link and click it
-      const url = URL.createObjectURL(data);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${internshipData.full_name}_report.pdf`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      
-      toast({
-        title: "Success",
-        description: "Report downloaded successfully.",
-      });
+      if (signedUrlData?.signedUrl) {
+        // Create a download link and click it
+        const a = document.createElement('a');
+        a.href = signedUrlData.signedUrl;
+        a.download = `${internshipData.full_name}_report.pdf`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        
+        toast({
+          title: "Success",
+          description: "Report download started.",
+        });
+      } else {
+        throw new Error("Could not get download URL");
+      }
     } catch (error) {
       console.error('Error downloading report:', error);
       toast({
@@ -105,6 +121,8 @@ const InternshipAuth = () => {
         description: "Failed to download report. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setDownloadLoading(false);
     }
   };
 
@@ -163,9 +181,14 @@ const InternshipAuth = () => {
           </CardContent>
           {internshipData.report_url && (
             <CardFooter>
-              <Button onClick={downloadReport} variant="outline" className="w-full">
+              <Button 
+                onClick={downloadReport} 
+                variant="outline" 
+                className="w-full"
+                disabled={downloadLoading}
+              >
                 <FileText className="mr-2 h-4 w-4" />
-                <span>Download Report</span>
+                <span>{downloadLoading ? "Downloading..." : "Download Report"}</span>
                 <Download className="ml-2 h-4 w-4" />
               </Button>
             </CardFooter>
