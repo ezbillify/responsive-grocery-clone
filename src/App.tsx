@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Products from "./pages/Products";
 import Shop from "./pages/Shop";
+import Contact from "./pages/Contact";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/careers" element={<TransitionLayout><Careers /></TransitionLayout>} />
           <Route path="/products" element={<TransitionLayout><Products /></TransitionLayout>} />
           <Route path="/shop" element={<TransitionLayout><Shop /></TransitionLayout>} />
+          <Route path="/contact" element={<TransitionLayout><Contact /></TransitionLayout>} />
           <Route path="/product/:id" element={<TransitionLayout><ProductDetail /></TransitionLayout>} />
           <Route path="/internship-verification" element={<TransitionLayout><Careers /></TransitionLayout>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
