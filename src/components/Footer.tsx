@@ -1,7 +1,64 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('newsletter_subscriptions')
+        .insert([{ email }]);
+      
+      if (error) {
+        if (error.code === '23505') {
+          toast({
+            title: "Already subscribed",
+            description: "This email is already subscribed to our newsletter",
+            variant: "destructive"
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Subscription successful!",
+          description: "Thank you for subscribing to our newsletter",
+        });
+        setEmail('');
+      }
+    } catch (error) {
+      console.error('Error subscribing to newsletter:', error);
+      toast({
+        title: "Subscription failed",
+        description: "There was an error subscribing to the newsletter. Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return <footer className="bg-grocery-dark text-white">
       {/* Newsletter subscription */}
       <div className="bg-grocery-primary py-12">
@@ -12,11 +69,22 @@ const Footer = () => {
               <p className="text-white/80">Subscribe to our newsletter for the latest industry insights</p>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/3">
-              <form className="flex">
-                <input type="email" placeholder="Your email address" className="flex-grow py-3 px-4 rounded-l-md focus:outline-none text-gray-900" />
-                <button type="submit" className="bg-grocery-accent hover:bg-grocery-accent/90 text-white py-3 px-6 rounded-r-md font-medium">
-                  Subscribe
-                </button>
+              <form className="flex" onSubmit={handleSubscribe}>
+                <Input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="flex-grow py-3 px-4 rounded-l-md focus:outline-none text-gray-900" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isSubmitting}
+                />
+                <Button 
+                  type="submit" 
+                  className="bg-grocery-accent hover:bg-grocery-accent/90 text-white py-3 px-6 rounded-r-md font-medium"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </Button>
               </form>
             </div>
           </div>
