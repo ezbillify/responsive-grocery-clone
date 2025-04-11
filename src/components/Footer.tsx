@@ -29,9 +29,7 @@ const Footer = () => {
           {/* About */}
           <div>
             <h4 className="text-lg font-bold mb-4">About YourBrand</h4>
-            <p className="text-gray-400 mb-4">
-              We're a forward-thinking company dedicated to helping businesses grow through innovative solutions and strategic partnerships.
-            </p>
+            <p className="text-gray-400 mb-4">Your smart grocery partner. Plan better, shop faster, waste less.</p>
             <div className="flex space-x-3">
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20">
                 <Facebook size={18} />
