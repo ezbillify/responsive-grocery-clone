@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-grocery-dark text-white">
+  return <footer className="bg-grocery-dark text-white">
       {/* Newsletter subscription */}
       <div className="bg-grocery-primary py-12">
         <div className="container mx-auto px-4">
@@ -16,15 +13,8 @@ const Footer = () => {
             </div>
             <div className="w-full md:w-1/2 lg:w-1/3">
               <form className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  className="flex-grow py-3 px-4 rounded-l-md focus:outline-none text-gray-900"
-                />
-                <button 
-                  type="submit" 
-                  className="bg-grocery-accent hover:bg-grocery-accent/90 text-white py-3 px-6 rounded-r-md font-medium"
-                >
+                <input type="email" placeholder="Your email address" className="flex-grow py-3 px-4 rounded-l-md focus:outline-none text-gray-900" />
+                <button type="submit" className="bg-grocery-accent hover:bg-grocery-accent/90 text-white py-3 px-6 rounded-r-md font-medium">
                   Subscribe
                 </button>
               </form>
@@ -96,15 +86,16 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
-                <p className="text-gray-400">123 Business Avenue, Tech Park, Bangalore 560001, India</p>
+                <p className="text-gray-400">454SE, 3rd Floor, Nisarga
+Layout, Jigani, Bangalore - 560083</p>
               </li>
               <li className="flex">
                 <Phone className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
-                <p className="text-gray-400">+91 1234567890</p>
+                <p className="text-gray-400">+91 7892853796</p>
               </li>
               <li className="flex">
                 <Mail className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
-                <p className="text-gray-400">info@yourbrand.com</p>
+                <p className="text-gray-400">contactus@grocerywave.in</p>
               </li>
             </ul>
           </div>
@@ -125,8 +116,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
