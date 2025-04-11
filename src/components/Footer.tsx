@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
@@ -136,11 +135,6 @@ const Footer = () => {
               <li>
                 <Link to="/careers" className="text-gray-400 hover:text-white flex items-center">
                   <ChevronRight size={14} className="mr-1" /> Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white flex items-center">
-                  <ChevronRight size={14} className="mr-1" /> Contact
                 </Link>
               </li>
             </ul>
