@@ -85,34 +85,40 @@ const InternshipAuth = () => {
     
     setDownloadLoading(true);
     try {
-      // Get the file name from the URL
-      const fileName = internshipData.report_url.split('/').pop() || 'report.pdf';
+      // Extract the actual path from the URL if needed
+      const filePath = internshipData.report_url.startsWith('internship_reports/') 
+        ? internshipData.report_url
+        : `internship_reports/${internshipData.report_url}`;
       
-      // First, try to get a signed URL for the file
-      const { data: signedUrlData, error: signedUrlError } = await supabase
-        .storage
+      // Use the downloadPublicUrl method which works better for public buckets
+      const { data, error } = await supabase.storage
         .from('internship_reports')
-        .createSignedUrl(internshipData.report_url, 60); // 60 seconds expiry
+        .download(filePath);
       
-      if (signedUrlError) {
-        throw signedUrlError;
+      if (error) {
+        console.error("Download error details:", error);
+        throw error;
       }
       
-      if (signedUrlData?.signedUrl) {
+      if (data) {
+        // Create a blob URL from the file
+        const url = URL.createObjectURL(data);
         // Create a download link and click it
         const a = document.createElement('a');
-        a.href = signedUrlData.signedUrl;
+        a.href = url;
         a.download = `${internshipData.full_name}_report.pdf`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
+        // Clean up the blob URL
+        URL.revokeObjectURL(url);
         
         toast({
           title: "Success",
           description: "Report download started.",
         });
       } else {
-        throw new Error("Could not get download URL");
+        throw new Error("Failed to download file");
       }
     } catch (error) {
       console.error('Error downloading report:', error);

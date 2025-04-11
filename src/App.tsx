@@ -30,6 +30,7 @@ const App = () => (
           <Route path="/products" element={<TransitionLayout><Products /></TransitionLayout>} />
           <Route path="/shop" element={<TransitionLayout><Shop /></TransitionLayout>} />
           <Route path="/product/:id" element={<TransitionLayout><ProductDetail /></TransitionLayout>} />
+          <Route path="/internship-verification" element={<TransitionLayout><Careers /></TransitionLayout>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<TransitionLayout><NotFound /></TransitionLayout>} />
         </Routes>
