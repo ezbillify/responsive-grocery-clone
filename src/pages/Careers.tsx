@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import InternshipAuth from '@/components/InternshipAuth';
 
 const Careers = () => {
   return (
@@ -77,13 +78,18 @@ const Careers = () => {
           </div>
         </section>
         
-        {/* Internship Section */}
+        {/* Internship Authentication Section */}
         <section className="py-12 md:py-16 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-8 text-center">
               Internship Authentication
             </h2>
-            {/* This section is just a heading in the mockup */}
+            <div className="bg-white rounded-xl p-6 md:p-8 shadow-md">
+              <p className="text-center text-gray-600 mb-6">
+                Enter your reference ID below to verify your internship details and download your certificate.
+              </p>
+              <InternshipAuth />
+            </div>
           </div>
         </section>
       </main>
