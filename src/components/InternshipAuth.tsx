@@ -85,41 +85,31 @@ const InternshipAuth = () => {
     
     setDownloadLoading(true);
     try {
-      // Extract the actual path from the URL if needed
-      const filePath = internshipData.report_url.startsWith('internship_reports/') 
-        ? internshipData.report_url
-        : `internship_reports/${internshipData.report_url}`;
-      
-      // Use the downloadPublicUrl method which works better for public buckets
-      const { data, error } = await supabase.storage
+      // Use direct file path provided in report_url
+      const { data, error } = await supabase
+        .storage
         .from('internship_reports')
-        .download(filePath);
+        .download(internshipData.report_url);
       
       if (error) {
-        console.error("Download error details:", error);
+        console.error('Download error:', error);
         throw error;
-      }
+      } 
       
-      if (data) {
-        // Create a blob URL from the file
-        const url = URL.createObjectURL(data);
-        // Create a download link and click it
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `${internshipData.full_name}_report.pdf`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        // Clean up the blob URL
-        URL.revokeObjectURL(url);
-        
-        toast({
-          title: "Success",
-          description: "Report download started.",
-        });
-      } else {
-        throw new Error("Failed to download file");
-      }
+      // Create a blob URL and trigger download
+      const url = URL.createObjectURL(data);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${internshipData.full_name}_report.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      
+      toast({
+        title: "Success",
+        description: "Report download started.",
+      });
     } catch (error) {
       console.error('Error downloading report:', error);
       toast({
