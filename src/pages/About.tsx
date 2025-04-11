@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
 const About = () => {
   return (
@@ -43,8 +44,12 @@ const About = () => {
         <section className="py-12 md:py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-5xl">
             <div className="flex flex-col md:flex-row items-center justify-between mb-12 md:mb-20">
-              <div className="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-md flex items-center justify-center mb-6 md:mb-0">
-                <p className="text-gray-600 font-medium">YET TO BE UPLOADED</p>
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-md overflow-hidden mb-6 md:mb-0">
+                <img 
+                  src="/lovable-uploads/a0a4da62-2473-4496-9e77-a92d790a8a24.png" 
+                  alt="Vijaya S Bhat" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <div className="md:ml-12 text-center md:text-left">
@@ -54,8 +59,12 @@ const About = () => {
             </div>
             
             <div className="flex flex-col md:flex-row-reverse items-center justify-between">
-              <div className="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-md flex items-center justify-center mb-6 md:mb-0">
-                <p className="text-gray-600 font-medium">YET TO BE UPLOADED</p>
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-md overflow-hidden mb-6 md:mb-0">
+                <img 
+                  src="/lovable-uploads/628344cb-24f4-4f9d-81a4-9b0fe68e0d4a.png" 
+                  alt="Sadashiva Bhat" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <div className="md:mr-12 text-center md:text-left">
