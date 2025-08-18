@@ -58,7 +58,8 @@ const Footer = () => {
     }
   };
 
-  return <footer className="bg-grocery-dark text-white">
+  return (
+    <footer className="bg-grocery-dark text-white">
       {/* Newsletter subscription */}
       <div className="bg-grocery-primary py-12">
         <div className="container mx-auto px-4">
@@ -146,8 +147,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
-                <p className="text-gray-400">454SE, 3rd Floor, Nisarga
-Layout, Jigani, Bangalore - 560083</p>
+                <p className="text-gray-400">454SE, 3rd Floor, Nisarga Layout, Jigani, Bangalore - 560083</p>
               </li>
               <li className="flex">
                 <Phone className="mr-3 text-grocery-primary flex-shrink-0" size={20} />
@@ -165,17 +165,33 @@ Layout, Jigani, Bangalore - 560083</p>
       {/* Copyright */}
       <div className="bg-black/20 py-4">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <p className="text-gray-400 text-sm mb-2 md:mb-0">
-              &copy; {new Date().getFullYear()} YourBrand. All rights reserved.
+              &copy; {new Date().getFullYear()} Grocerywave Pvt Ltd. All rights reserved.
             </p>
-            <div className="flex space-x-4 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link>
+            <div className="flex flex-col md:flex-row md:items-center gap-2 text-sm">
+              <span className="text-gray-400">
+                Powered & Maintained by{" "}
+                <a 
+                  href="https://www.ezbillify.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-grocery-primary hover:underline"
+                >
+                  Ezbillify
+                </a>
+              </span>
+              <div className="flex space-x-4">
+                <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
+                <Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
+
