@@ -1,77 +1,107 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Zap, ShieldCheck, Headphones, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-r from-white to-grocery-secondary min-h-[80vh] flex items-center">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row py-8 md:py-16 px-4">
-          <div className="w-full md:w-1/2 flex flex-col justify-center mb-12 md:mb-0">
-            <span className="text-grocery-primary font-medium mb-2">Welcome to our brand</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-grocery-dark">
-              We deliver <span className="text-grocery-primary">innovative solutions</span>
+    <section className="relative bg-gradient-to-br from-emerald-600 to-teal-700 pt-20 pb-32 overflow-hidden">
+      {/* Abstract Background Shapes */}
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-white opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-emerald-300 opacity-10 blur-3xl"></div>
+
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide text-emerald-100 uppercase bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              Welcome to GroceryWave
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+              We deliver <br/>
+              <span className="text-emerald-200">innovative solutions</span>
             </h1>
-            <p className="text-lg mb-8 text-gray-600 max-w-lg">
-              Empowering businesses with cutting-edge technology and creative strategies to help you stand out in today's competitive market.
+            <p className="text-lg md:text-xl mb-8 text-emerald-50 max-w-lg mx-auto md:mx-0 leading-relaxed">
+              Empowering businesses and daily lives with cutting-edge technology and premium products to help you stand out in today's competitive market.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/about" className="btn-primary">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <Link 
+                to="/about" 
+                className="px-8 py-4 bg-white text-emerald-700 font-bold rounded-xl shadow-lg hover:shadow-xl hover:bg-emerald-50 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+              >
                 Learn More
               </Link>
-              <Link to="/contact" className="btn-accent flex items-center">
-                Contact Us <ChevronRight size={16} className="ml-1" />
+              <Link 
+                to="/contact" 
+                className="px-8 py-4 border-2 border-emerald-400 bg-transparent text-white font-bold rounded-xl hover:bg-emerald-600/50 transition-all flex items-center justify-center gap-2"
+              >
+                Contact Us <ChevronRight size={18} />
               </Link>
             </div>
           </div>
+
+          {/* Hero Image / Placeholder */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
-            <div className="relative w-full max-w-lg h-80 md:h-96 bg-white rounded-lg overflow-hidden shadow-lg">
-              {/* Placeholder for hero image */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                <span className="text-gray-500">Brand Hero Image</span>
+            <div className="relative w-full max-w-lg h-80 md:h-[400px] bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
+              {/* Decorative elements */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/5 opacity-50"></div>
+              
+              {/* Content Placeholder */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-12 h-12 bg-white rounded-full opacity-20 animate-pulse"></div>
+                </div>
+                <span className="font-medium text-lg tracking-wide">Brand Hero Image</span>
+                <span className="text-sm text-emerald-200 mt-2">1200 x 800px</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* Feature boxes */}
-      <div className="container mx-auto px-4 pb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <div className="rounded-full bg-grocery-secondary p-3 mr-3 w-14 h-14 flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-grocery-primary rounded-full flex items-center justify-center">
-                <span className="text-xs text-white">Icon</span>
-              </div>
-            </div>
-            <h3 className="font-semibold text-xl mb-2">Innovation</h3>
-            <p className="text-gray-500">We constantly push boundaries to create cutting-edge solutions</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <div className="rounded-full bg-grocery-secondary p-3 mr-3 w-14 h-14 flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-grocery-primary rounded-full flex items-center justify-center">
-                <span className="text-xs text-white">Icon</span>
-              </div>
-            </div>
-            <h3 className="font-semibold text-xl mb-2">Quality</h3>
-            <p className="text-gray-500">We're committed to delivering excellence in everything we do</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <div className="rounded-full bg-grocery-secondary p-3 mr-3 w-14 h-14 flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-grocery-primary rounded-full flex items-center justify-center">
-                <span className="text-xs text-white">Icon</span>
-              </div>
-            </div>
-            <h3 className="font-semibold text-xl mb-2">Support</h3>
-            <p className="text-gray-500">Dedicated team providing exceptional customer service</p>
-          </div>
+
+        {/* Feature Boxes - Floating Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          <FeatureBox 
+            icon={<Zap size={24} />} 
+            title="Innovation" 
+            description="We constantly push boundaries to create cutting-edge solutions for modern needs."
+            delay="0"
+          />
+          <FeatureBox 
+            icon={<ShieldCheck size={24} />} 
+            title="Quality Assurance" 
+            description="We're committed to delivering excellence and authenticity in everything we do."
+            delay="100"
+          />
+          <FeatureBox 
+            icon={<Headphones size={24} />} 
+            title="24/7 Support" 
+            description="Dedicated team providing exceptional customer service whenever you need us."
+            delay="200"
+          />
         </div>
       </div>
     </section>
   );
 };
+
+// Helper Component for the cards
+const FeatureBox = ({ icon, title, description, delay }) => (
+  <div 
+    className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-emerald-500 group"
+    style={{ animationDelay: `${delay}ms` }}
+  >
+    <div className="flex items-start justify-between mb-4">
+      <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+        {icon}
+      </div>
+      <div className="opacity-0 group-hover:opacity-100 transition-opacity text-emerald-300">
+        <ArrowRight size={20} />
+      </div>
+    </div>
+    <h3 className="font-bold text-xl mb-3 text-slate-800 group-hover:text-emerald-700 transition-colors">{title}</h3>
+    <p className="text-slate-500 leading-relaxed text-sm">
+      {description}
+    </p>
+  </div>
+);
 
 export default Hero;
