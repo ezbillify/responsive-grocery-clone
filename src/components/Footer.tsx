@@ -128,7 +128,7 @@ const Footer = () => {
                 <div className="bg-grocery-primary/10 p-2 rounded-lg text-grocery-primary">
                   <Mail size={20} />
                 </div>
-                <p className="text-slate-400 hover:text-white transition-colors">contactus@grocerywave.in</p>
+                <p className="text-slate-400 hover:text-white transition-colors">grocerywave.india@gmail.com</p>
               </li>
             </ul>
           </div>

@@ -90,7 +90,7 @@ const Careers = () => {
                   </div>
                   <div className="text-left">
                     <span className="block text-xs text-slate-400 uppercase tracking-wider font-semibold">Send your resume to</span>
-                    <span className="block text-white font-bold text-lg">admin@grocerywave.in</span>
+                    <span className="block text-white font-bold text-lg">grocerywave.india@gmail.com</span>
                   </div>
                 </div>
               </div>
