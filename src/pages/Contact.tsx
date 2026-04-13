@@ -74,11 +74,7 @@ const Contact = () => {
                       title="Visit Us"
                       content="454SE, 3rd Floor, Nisarga Layout, Jigani, Bangalore - 560083"
                     />
-                    <ContactInfoItem
-                      icon={<Phone className="text-grocery-primary" size={24} />}
-                      title="Call Us"
-                      content="+91 7411995476"
-                    />
+
                     <ContactInfoItem
                       icon={<Mail className="text-grocery-primary" size={24} />}
                       title="Email Us"
@@ -159,8 +155,8 @@ const Contact = () => {
                     type="submit"
                     disabled={isSubmitting || submitted}
                     className={`w-full py-4 rounded-xl font-bold shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 ${submitted
-                        ? 'bg-green-500 text-white shadow-green-200'
-                        : 'bg-grocery-primary hover:bg-orange-700 text-white shadow-orange-200 hover:shadow-orange-300'
+                      ? 'bg-green-500 text-white shadow-green-200'
+                      : 'bg-grocery-primary hover:bg-orange-700 text-white shadow-orange-200 hover:shadow-orange-300'
                       } disabled:opacity-70 disabled:cursor-not-allowed`}
                   >
                     {isSubmitting ? (
