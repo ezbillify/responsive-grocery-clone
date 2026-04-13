@@ -122,7 +122,7 @@ const Footer = () => {
                 <div className="bg-grocery-primary/10 p-2 rounded-lg text-grocery-primary">
                   <Phone size={20} />
                 </div>
-                <p className="text-slate-400 hover:text-white transition-colors">+91 7892853796</p>
+                <p className="text-slate-400 hover:text-white transition-colors">+91 7411995476</p>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-grocery-primary/10 p-2 rounded-lg text-grocery-primary">

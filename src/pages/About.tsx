@@ -83,43 +83,25 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
               {/* Director 1 */}
-              <div className="group bg-white p-6 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center border border-slate-100 hover:border-grocery-primary/20">
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-grocery-primary rounded-full blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                  <img 
-                    src="/lovable-uploads/a0a4da62-2473-4496-9e77-a92d790a8a24.png" 
-                    alt="Vijaya S Bhat" 
-                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-md relative z-10"
-                  />
-                  <div className="absolute bottom-2 right-2 z-20 bg-grocery-primary text-white p-2 rounded-full shadow-lg">
-                    <Users size={20} />
-                  </div>
+              <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center border border-slate-100 hover:border-grocery-primary/20">
+                <div className="w-16 h-16 bg-grocery-primary/10 text-grocery-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-grocery-primary group-hover:text-white transition-colors duration-300">
+                  <Users size={32} />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-slate-900 mb-1">VIJAYA S BHAT</h3>
                 <p className="text-grocery-primary font-bold tracking-wider text-sm uppercase mb-4">Director</p>
-                <p className="text-slate-500 text-sm max-w-xs">
+                <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
                   Leading with vision and dedication to bring quality products to every household.
                 </p>
               </div>
               
               {/* Director 2 */}
-              <div className="group bg-white p-6 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center border border-slate-100 hover:border-grocery-primary/20">
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-grocery-primary rounded-full blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                  <img 
-                    src="/lovable-uploads/628344cb-24f4-4f9d-81a4-9b0fe68e0d4a.png" 
-                    alt="Sadashiva Bhat" 
-                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-md relative z-10"
-                  />
-                  <div className="absolute bottom-2 right-2 z-20 bg-grocery-primary text-white p-2 rounded-full shadow-lg">
-                    <Users size={20} />
-                  </div>
+              <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center border border-slate-100 hover:border-grocery-primary/20">
+                <div className="w-16 h-16 bg-grocery-primary/10 text-grocery-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-grocery-primary group-hover:text-white transition-colors duration-300">
+                  <Users size={32} />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-slate-900 mb-1">SADASHIVA BHAT</h3>
                 <p className="text-grocery-primary font-bold tracking-wider text-sm uppercase mb-4">Director</p>
-                <p className="text-slate-500 text-sm max-w-xs">
+                <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
                   Driving innovation and operational excellence to ensure customer satisfaction.
                 </p>
               </div>
